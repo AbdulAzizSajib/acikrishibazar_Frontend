@@ -8,7 +8,8 @@
       src="https://kit.fontawesome.com/9a03863fc1.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -112,17 +113,17 @@
     <main>
       <!-- Banner Section -->
       <section class="max-w-[1620px] mx-auto">
-        <div class="flex justify-between gap-2 border md:gap-8">
+        <div class="flex flex-col md:flex-row justify-between gap-2 border md:gap-8">
           <div class="max-w-7/12 relative">
             <img
               class="object-cover w-full h-full"
               src="/assests/banner/3.svg"
               alt=""
             />
-            <div class="absolute top-10 left-10 ">
-              <h2 class="text-2xl font-bold">Title</h2>
-              <p class="text-4xl font-bold">Description</p>
-              <button class="border p-3 rounded-md bg-primary mt-8 text-white">Shop Now
+            <div class="absolute top-5 left-5 ">
+              <h2 class="text-xl font-bold">Title</h2>
+              <p class="text-3xl font-bold">Description</p>
+              <button class="border btn  rounded-md bg-primary mt-8 text-white">Shop Now
               </button>
             </div>
           </div>
@@ -136,7 +137,7 @@
               <div class="absolute top-5 left-5 ">
                 <h2 class="text-xl font-bold">Title</h2>
                 <p class="text-3xl font-bold">Description</p>
-                <button class="border p-2 border-none rounded-md bg-[#22C55E] mt-5 text-white">Shop Now
+                <button class="border btn  border-none rounded-md bg-[#22C55E] mt-2 text-white">Shop Now
                 </button>
               </div>
             </div>
@@ -149,13 +150,67 @@
               <div class="absolute top-5 left-5 ">
                 <h2 class="text-xl font-bold">Title</h2>
                 <p class="text-3xl font-bold">Description</p>
-                <button class="border p-2 border-none rounded-md bg-[#22C55E] mt-5 text-white">Shop Now
+                <button class="border btn  border-none rounded-md bg-[#22C55E] mt-5 text-white">Shop Now
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+     <!-- Swip -->
+      <section class="mt-4 ">
+        <div class="grid grid-cols-2 md:grid-cols-4  lg:grid-cols-8 place-items-center space-x-3">
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/animal 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Pet & Birds</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/aquarium 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Fish</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/cow-silhouette 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Cattle</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/healthy-food 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Vegetable</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/hen 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Poultry</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/injection 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Vaccine</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/seed-bag (1) 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Fertilizer</h2>
+          </div>
+          <div>
+            <div  class="w-[150px] flex items-center justify-center  h-[150px] bg-[#e3fff3] rounded-full">
+              <img class="w-[78px]" src="/assests/swipIcon/sdsft54r 1.svg" alt="">
+            </div>
+            <h2 class="text-center font-semibold text-lg mt-1">Animal Genetic</h2>
+          </div>
+        </div>
+      </section>
+
     </main>
     <footer></footer>
   </body>
