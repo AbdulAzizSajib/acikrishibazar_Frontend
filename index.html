@@ -31,6 +31,9 @@
       .jost {
         font-family: "Jost", sans-serif;
       }
+      .countdown span {
+        display: inline-block;
+      }
     </style>
   </head>
 
@@ -210,8 +213,91 @@
           </div>
         </div>
       </section>
+      <!-- Products -->
+       <section class="mt-16">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex flex-col md:flex-row gap-4 items-center">
+            <h2 class="text-xl font-semibold">Today's Hot Deals</h2>
+            
+            <div class="grid auto-cols-max grid-flow-col rounded-2xl px-3 gap-5 text-center bg-[#ffd455]">
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span id="days" style="--value:15;"></span>
+                </span>
+                days
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span id="hours" style="--value:10;"></span>
+                </span>
+                hours
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span id="minutes" style="--value:24;"></span>
+                </span>
+                min
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span id="seconds" style="--value:0;"></span>
+                </span>
+                sec
+              </div>
+            </div>
+          
+
+          </div>
+          <div>
+            <button class="btn hidden md:block btn-sm  bg-primary text-white">View All</button>
+          </div>
+        </div>
+        <!--  -->
+        <div>
+          <div class="h-[429px] w-[307px] border-2 bg-[#e3fff3]"> 
+          <div class="w-[307px] h-[218px] flex justify-center  bg-white items-center relative border">
+            <img class="w-[175px]" src="/assests/products/cardamom-botanical-five-pods-seeds-cut-seed-pods-removebg-preview 1.svg" alt="">
+            <div class="absolute px-4 border-2 top-6 w-full flex justify-between">
+              <div  class="border  flex items-center justify-center ">
+                <p class="border bg-[#a5ffd9] text-center px-2">In Stock</p>
+               </div>
+              
+               <div  class="border-2 bg-[#a5ffd9] border-[#34d08d]  flex items-center justify-center rounded-full w-14 h-14">
+                <p class="text-center ">10 % Save</p>
+               </div>
+             
+            </div>
+          </div>
+          <h2>name</h2>
+          <h2><i class="fa-solid fa-star text-yellow-400"></i> 5.0 <span class="text-gray-400">(135 Reviews)</span></h2>
+          <h2>350 <i class="fa-solid fa-bangladeshi-taka-sign"></i></h2>
+
+          <button>Add to Cart</button>
+          
+          </div>
+        </div>
+       </section>
 
     </main>
     <footer></footer>
+    <script>
+      function updateCountdown() {
+        const endTime = new Date("July 5, 2024 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+  
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+        document.getElementById('days').style.setProperty('--value', days);
+        document.getElementById('hours').style.setProperty('--value', hours);
+        document.getElementById('minutes').style.setProperty('--value', minutes);
+        document.getElementById('seconds').style.setProperty('--value', seconds);
+      }
+  
+      setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>
