@@ -36,34 +36,34 @@
   <body class="jost">
     <header>
       <!-- Nav Section -->
-      <nav class="flex flex-wrap items-center">
+      <nav class="flex flex-wrap px-2  items-center">
         <!-- 1st Div -->
         <div
-          class="flex items-center justify-between w-full px-4 md:w-4/12 md:justify-start"
+          class="flex items-center  justify-between w-full px-4 md:w-5/12 md:justify-start"
         >
           <a
             href="#"
-            class="w-full text-xl font-extrabold text-center lg:mr-14 lg:w-auto text-primary"
+            class="w-full text-xl mr-4  font-extrabold text-center  lg:w-auto text-primary"
             >ACI Krishibazar</a
           >
           <div class="hidden ml-4 space-x-4 sm:flex">
-            <div class="flex items-center space-x-2">
+            <div class="flex justify-center border  items-center space-x-2">
               <img
-                class="min-w-8"
+                class="max-w-8"
                 src="/assests/liveChat.svg"
                 alt="Live Chat"
               />
-              <a href="#" class="hidden text-lg xl:block text-primary"
+              <a href="#" class="hidden text-md xl:block text-primary"
                 >Help & Contact</a
               >
             </div>
-            <div class="flex items-center space-x-2">
+            <div class="flex justify-center border  items-center space-x-2">
               <img
-                class="min-w-8"
+                class="max-w-8"
                 src="/assests/van .svg"
                 alt="Order Tracking"
               />
-              <a href="#" class="hidden text-lg xl:block text-primary"
+              <a href="#" class="hidden text-md xl:block text-primary"
                 >Order Tracking</a
               >
             </div>
@@ -111,29 +111,47 @@
     </header>
     <main>
       <!-- Banner Section -->
-      <section class="max-w-[1620px] mx-auto border border-red-500">
+      <section class="max-w-[1620px] mx-auto">
         <div class="flex justify-between gap-2 border md:gap-8">
-          <div class="max-w-7/12">
+          <div class="max-w-7/12 relative">
             <img
               class="object-cover w-full h-full"
               src="/assests/banner/3.svg"
               alt=""
             />
+            <div class="absolute top-10 left-10 ">
+              <h2 class="text-2xl font-bold">Title</h2>
+              <p class="text-4xl font-bold">Description</p>
+              <button class="border p-3 rounded-md bg-primary mt-8 text-white">Shop Now
+              </button>
+            </div>
           </div>
           <div class="space-y-2 md:space-y-8 max-w-5/12">
-            <div>
+            <div class="relative">
               <img
                 class="object-cover w-full h-full"
                 src="/assests/banner/1.svg"
                 alt=""
               />
+              <div class="absolute top-5 left-5 ">
+                <h2 class="text-xl font-bold">Title</h2>
+                <p class="text-3xl font-bold">Description</p>
+                <button class="border p-2 border-none rounded-md bg-[#22C55E] mt-5 text-white">Shop Now
+                </button>
+              </div>
             </div>
-            <div>
+            <div class="relative">
               <img
                 class="object-cover w-full h-full"
                 src="/assests/banner/2.svg"
                 alt=""
               />
+              <div class="absolute top-5 left-5 ">
+                <h2 class="text-xl font-bold">Title</h2>
+                <p class="text-3xl font-bold">Description</p>
+                <button class="border p-2 border-none rounded-md bg-[#22C55E] mt-5 text-white">Shop Now
+                </button>
+              </div>
             </div>
           </div>
         </div>
