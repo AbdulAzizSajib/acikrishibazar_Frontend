@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="">
+  <section class="">
+    <div class="relative ">
+      <img class="object-cover" src="/assests/Breadcrumbs.png" alt="Breadcrumbs Image">
+     <div class="absolute top-0 text-white">
+      <nav aria-label="breadcrumb" class="w-full p-4  dark:bg-gray-100 dark:text-gray-800">
+        <ol class="flex h-8 space-x-2">
+          <li class="flex items-center">
+            <a rel="noopener noreferrer" href="#" title="Back to homepage" class="hover:underline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 pr-1 dark:text-gray-600">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" class="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400">
+              <path d="M32 30.031h-32l16-28.061z"></path>
+            </svg>
+            <a rel="noopener noreferrer" href="#" class="flex items-center px-1 capitalize hover:underline">Parent</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" class="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400">
+              <path d="M32 30.031h-32l16-28.061z"></path>
+            </svg>
+            <a rel="noopener noreferrer" href="#" class="flex items-center px-1 capitalize hover:underline">Parent</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" class="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400">
+              <path d="M32 30.031h-32l16-28.061z"></path>
+            </svg>
+            <a rel="noopener noreferrer" href="#" class="flex items-center px-1 capitalize hover:underline hover:no-underline cursor-default">Current</a>
+          </li>
+        </ol>
+      </nav>
+     </div>
+    </div>
+    <!-- login form -->  
+   <section class="flex justify-center mt-6">
+    <div class="flex  shadow-lg border flex-col p-6 rounded-md justify-center items-center bg-white dark:bg-gray-50 dark:text-gray-800">
+      <div class="mb-8 text-center">
+        <h1 class="my-3 text-4xl font-bold">Sign in</h1>
+        <p class="text-sm dark:text-gray-600">Sign in to access your account</p>
+      </div>
+      <form novalidate action="" class="space-y-12">
+        <div class="space-y-4">
+          <div>
+            <label for="email" class="block mb-2 text-sm">Phone Number</label>
+            <input type="email" name="email" id="email" placeholder="" class="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800">
+          </div>
+          <div>
+            <div class="flex justify-between mb-2">
+              <label for="password" class="text-sm">Password</label>
+              <a href="#" class="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
+            </div>
+            <input type="password" name="password" id="password" placeholder="*****" class="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800">
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div>
+            <button type="button" class="w-full px-8 py-3 font-semibold rounded-md text-white bg-green-700">Sign in</button>
+          </div>
+          <p class="px-6 text-sm text-center dark:text-gray-600">Don't have an account yet?
+            <a href="#" class="hover:underline dark:text-violet-600">Sign up</a>.
+          </p>
+        </div>
+      </form>
+    </div>
+   </section>
+  </section>
+</body>
+</html>
