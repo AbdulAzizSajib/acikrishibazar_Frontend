@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ACI Krishibazar</title>
+        <script
+          src="https://kit.fontawesome.com/9a03863fc1.js"
+          crossorigin="anonymous"
+        ></script>
+        <!-- preline UI -->
+        <script src="./node_modules/preline/dist/preline.js"></script>
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: "#0D9158",
+                },
+              },
+            },
+          };
+        </script>
+        <!-- Font -->
+    
+        <link
+          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+          .jost {
+            font-family: "Jost", sans-serif;
+          }
+          .countdown span {
+            display: inline-block;
+          }
+
+        </style>
+      </head>
+<body class="jost">
+    
+
+    <header class=" max-w-[1620px] mx-auto">
+        <!-- Nav Section -->
+        <nav class="flex flex-wrap items-center">
+          <!-- 1st Div -->
+  
+          <div class="flex items-center gap-2">
+            <a
+              href="/"
+              class="lg:text-[1.5vw] text-[2rem] text-center lg:mr-[2rem]  text-primary font-extrabold lg:w-auto"
+              >ACI Krishibazar</a
+            >
+  
+            <div class="items-center hidden gap-2 lg:flex">
+              <div class="flex items-center space-x-2 ">
+                <img
+                  class="max-w-8"
+                  src="/assests/liveChat.svg"
+                  alt="Live Chat"
+                />
+                <a href="#" class="hidden text-md xl:block text-primary"
+                  >Help & Contact</a
+                >
+              </div>
+              <div class="flex items-center space-x-2 ">
+                <img
+                  class="max-w-8"
+                  src="/assests/van .svg"
+                  alt="Order Tracking"
+                />
+                <a href="#" class="htext-md xl:block text-primary"
+                  >Order Tracking</a
+                >
+              </div>
+            </div>
+          </div>
+  
+          <!-- 2nd Div -->
+  
+          <div class="w-full px-4 py-3 md:flex-1">
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-5">
+                <i class="text-xl text-gray-500 fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input
+                type="text"
+                class="w-full px-4 py-3 pr-20 text-gray-900 bg-gray-200 rounded-full pl-14"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+          <!-- 3rd Div -->
+          <div
+            class="flex items-center justify-center w-full px-4 py-3 space-x-3 md:w-auto"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full"
+            >
+              <img src="/assests/icon/4.svg" alt="Icon 4" />
+            </div>
+            <div
+              class="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full"
+            >
+              <img src="/assests/icon/1.svg" alt="Icon 1" />
+            </div>
+            <div
+              class="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full"
+            >
+              <img src="/assests/icon/2.svg" alt="Icon 2" />
+            </div>
+            <div
+              class="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full"
+            >
+              <img src="/assests/icon/3.svg" alt="Icon 3" />
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="min-h-screen">
+        <!-- layout title  -->
+        <div class="relative ">
+            <img class="object-cover" src="/assests/Breadcrumbs.png" alt="Breadcrumbs Image">
+           <div class="absolute inset-0 flex justify-center items-center text-white">
+            <nav aria-label="breadcrumb" class="w-full p-4  dark:bg-gray-100 dark:text-gray-800">
+              <ol class="flex h-8 space-x-2">
+                <li class="flex items-center">
+                  <a rel="noopener noreferrer" href="#" title="Back to homepage" class="hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 pr-1 dark:text-gray-600">
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-angle-right"></i>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center px-1 capitalize hover:underline">Category</a>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-angle-right"></i>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center px-1 capitalize hover:underline">Fish</a>
+                </li>
+               
+              </ol>
+            </nav>
+           </div>
+          </div>
+          <!-- category part -->
+          <section class="w-full">
+            <div class="mx-auto max-w-7xl px-2 py-10 lg:px-10">
+             
+              
+              <div class="lg:grid lg:grid-cols-12 lg:gap-x-6 ">
+                
+                <div class="hidden space-y-6 divide-y lg:col-span-3 lg:block">
+                    <div class="flex bg-primary text-white px-6 border py-2 rounded-3xl items-center justify-between"><h2 class=" font-semibold text-center text-xl rounded-3xl ">filter</h2>
+                        <i class="fa-solid fa-arrow-down-wide-short"></i></div>
+                  <div class="pt-6">
+                    <h3 class="text-lg font-semibold text-gray-900">All Category</h3>
+                    <ul class="mt-2">
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" checked="checked" class="checkbox border-2 border-green-800 [--chkbg:theme(colors.white)] [--chkfg:green] checked:border-green-800 rounded-full" />
+                          <label
+                            for="color-white"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            Cattle <span class="text-gray-400">(32)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" checked="checked" class="checkbox border-2 border-green-800 [--chkbg:theme(colors.white)] [--chkfg:green] checked:border-green-800 rounded-full" />
+                          <label
+                            for="color-white"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            Fish <span class="text-gray-400">(46)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" checked="checked" class="checkbox border-2 border-green-800 [--chkbg:theme(colors.white)] [--chkfg:green] checked:border-green-800 rounded-full" />
+                          <label
+                            for="color-white"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            Poulty <span class="text-gray-400">(25)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" checked="checked" class="checkbox border-2 border-green-800 [--chkbg:theme(colors.white)] [--chkfg:green] checked:border-green-800 rounded-full" />
+                          <label
+                            for="color-white"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            Pets & Birds <span class="text-gray-400">(42)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" checked="checked" class="checkbox border-2 border-green-800 [--chkbg:theme(colors.white)] [--chkfg:green] checked:border-green-800 rounded-full" />
+                          <label
+                            for="color-white"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            Vaccine <span class="text-gray-400">(65)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" checked="checked" class="checkbox border-2 border-green-800 [--chkbg:theme(colors.white)] [--chkfg:green] checked:border-green-800 rounded-full" />
+                          <label
+                            for="color-white"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            Animal Genetic <span class="text-gray-400">(22)</span>
+                          </label>
+                        </div>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                  
+                  <div class="max-w-lg mx-auto pt-6  bg-white  ">
+                    <!-- <label class="block text-xl  font-semibold text-gray-700 mb-2">Price <span id="priceValue">100 Taka</span></label> -->
+                     <h2 class="text-xl font-semibold mb-2">Price</h2>
+                    <input type="range" id="priceRange" min="100" max="10000" value="5050" class="range range-sm w-full range-success">
+                    <label for="priceRange" class="text-gray-500">Price : <span id="priceValue">100 Taka</span> </label>
+                  </div>
+                  
+                
+                  <script>
+                    const rangeInput = document.getElementById('priceRange');
+                    const priceValue = document.getElementById('priceValue');
+                
+                    rangeInput.addEventListener('input', function() {
+                      priceValue.textContent = `${rangeInput.value} Taka`;
+                    });
+                  </script>
+                  
+                  <div class="pt-6">
+                    <h3 class="text-lg font-semibold text-gray-900">Rating</h3>
+                    <ul class="mt-2">
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox   bg-green-800 [--chkbg:theme(colors.green.800)] [--chkfg:white]" />
+
+
+                          <label
+                            for="category-new-arrivals"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                
+                                </div>
+                                <h2>5.0</h2>
+                            </div>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox   bg-green-800 [--chkbg:theme(colors.green.800)] [--chkfg:white]" />
+
+
+                          <label
+                            for="category-new-arrivals"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                              
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                </div>
+                                <h2>4.0 & Up</h2>
+                            </div>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox   bg-green-800 [--chkbg:theme(colors.green.800)] [--chkfg:white]" />
+
+
+                          <label
+                            for="category-new-arrivals"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                             
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                </div>
+                                <h2>3.0 & Up</h2>
+                            </div>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox   bg-green-800 [--chkbg:theme(colors.green.800)] [--chkfg:white]" />
+
+
+                          <label
+                            for="category-new-arrivals"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                
+                                <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                </div>
+                                <h2>2.0 & Up</h2>
+                            </div>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="flex items-center justify-between py-2">
+                        <div class="flex items-center">
+                            <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox   bg-green-800 [--chkbg:theme(colors.green.800)] [--chkfg:white]" />
+
+
+                          <label
+                            for="category-new-arrivals"
+                            class="ml-3 text-sm font-medium text-gray-900"
+                          >
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <i class="fa-solid fa-star text-md text-yellow-500"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                               
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                <i class="fa-solid fa-star text-md text-gray-300"></i>
+                                </div>
+                                <h2>1.0 & Up</h2>
+                            </div>
+                          </label>
+                        </div>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                  <div class="max-w-lg mx-auto pt-6 bg-white ">
+                    <h2 class="text-lg font-medium text-gray-700 mb-4">Popular Tag</h2>
+                    <div class="flex flex-wrap gap-2">
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">Healthy</div>
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">Animals</div>
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">Birds</div>
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">Motors</div>
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">pets</div>
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">Genetic</div>
+                      <div class="px-3 py-1 rounded-full text-sm font-medium bg-[#f2f2f2] text-black hover:text-white hover:bg-green-700">Vegetable</div>
+                      
+                      <!-- Add more tags as needed -->
+                    </div>
+                    <div class="pt-6">
+                        <img src="/assests/banner/adbanner.png" alt="">
+                       
+                    </div>
+                    <div class="pt-6 space-y-3">
+<div class="flex  items-center border-2 p-4 rounded-lg justify-between">
+    <img class="max-w-[100px]" src="/assests/products/tomato.png" alt="">
+    <div>
+        <h2 class="text-lg font-medium">Green Chilli</h2>
+        <h2 class="text-lg font-light">280 Taka <span class="line-through">320 Taka</span></h2>
+        <div>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-400"></i>
+        </div>
+    </div>
+</div>
+<div class="flex items-center border-2 p-4 rounded-lg justify-between">
+    <img class="max-w-[100px]" src="/assests/products/fruits.png" alt="">
+    <div>
+        <h2 class="text-lg font-medium">Fruits</h2>
+        <h2 class="text-lg font-light">280 Taka <span class="line-through">320 Taka</span></h2>
+        <div>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-400"></i>
+        </div>
+    </div>
+</div>
+<div class="flex items-center border-2 p-4 rounded-lg justify-between">
+    <img class="max-w-[100px]" src="/assests/products/darcini.png" alt="">
+    <div>
+        <h2 class="text-lg font-medium">Darcini</h2>
+        <h2 class="text-lg font-light">280 Taka <span class="line-through">320 Taka</span></h2>
+        <div>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-400"></i>
+        </div>
+    </div>
+</div>
+                    </div>
+                  </div>
+<!-- !!....................... -->
+                </div>
+                <div class="h-[400px] w-full rounded-lg  px-2 lg:col-span-9 lg:h-full">
+                    <!-- tilte result etc -->
+                    <div class="border-2 flex justify-between items-center ">
+
+                     <div class="flex gap-2 items-center">
+                        <h2>Sort By:</h2>
+                        <select name="" id="category" class="border-2">
+                            <option value="volvo">Latest</option>
+                            <option value="saab">Premium</option>
+                            
+                          </select>
+                     </div>
+                     <h2>52 Result Found</h2>
+                    </div>
+                    <!-- prodcuts -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 border">
+                       
+                         <div class="border  px-2  border-gray-500 rounded-2xl">
+                            <div class="flex justify-center">
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1 text-center lg:text-start">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn   mb-2  hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                       
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                         <div class="border px-2 border-gray-500 rounded-2xl">
+                            <div>
+                                <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                            </div>
+                           <div class="space-y-1">
+                            <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                            <div>
+                               <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                            </div>
+                            <h1 class="text-xl font-semibold">350 taka</h1>
+                           </div>
+                           <button class="btn mb-2 border hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                         </div>
+                       
+                      </div>
+              </div>
+            </div>
+          </section>
+          
+      </main>
+      <footer class="relative flex flex-col lg:flex-row items-start gap-8 p-10 mt-5 text-white bg-zinc-900">
+        <nav class="w-full lg:w-3/12 ">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/assests/banner/Vector.png" alt="" />
+            <h2 class="text-xl font-bold text-white">ACI krishibazar</h2>
+          </div>
+          <p class="font-light text-justify text-gray-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit voluptas, neque sed aperiam iste illum cupiditate, laboriosam accusamus illo id fuga repellat consectetur magni ipsam, aspernatur molestiae sapiente. Et!
+          </p>
+        </nav>
+        <div class="flex flex-col lg:flex-row justify-between w-full lg:w-4/12 ">
+          <nav class="">
+            <h6 class="text-xl font-bold text-white">Services</h6>
+            <div class="flex flex-col">
+              <a class="text-gray-300 link link-hover">Branding</a>
+              <a class="text-gray-300 link link-hover">Design</a>
+              <a class="text-gray-300 link link-hover">Marketing</a>
+              <a class="text-gray-300 link link-hover">Advertisement</a>
+            </div>
+          </nav>
+          <nav>
+            <h6 class="text-xl font-bold text-white">Company</h6>
+            <div class="flex flex-col">
+              <a class="text-gray-300 link link-hover">About us</a>
+              <a class="text-gray-300 link link-hover">Contact</a>
+              <a class="text-gray-300 link link-hover">Jobs</a>
+              <a class="text-gray-300 link link-hover">Press kit</a>
+            </div>
+          </nav>
+          <nav>
+            <h6 class="text-xl font-bold text-white">Legal</h6>
+            <div class="flex flex-col">
+              <a class="text-gray-300 link link-hover">Terms of use</a>
+              <a class="text-gray-300 link link-hover">Privacy policy</a>
+              <a class="text-gray-300 link link-hover">Cookie policy</a>
+            </div>
+          </nav>
+        </div>
+        <div class="absolute bottom-0 right-0 flex flex-col lg:flex-row gap-5 p-4 ">
+          <div class="flex items-center gap-2">
+            <i class="text-white fa-solid fa-phone"></i>
+            <h1 class="text-white">+123456789</h1>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="text-white fa-solid fa-envelope"></i>
+            <h1 class="text-white">poxy@gmail.com</h1>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- <div class="max-w-7xl border mx-5 h-0.5"></div>    -->
+
+      <footer
+        class="px-10 py-4 border-t-2  bg-zinc-900 footer text-base-content -base-300"
+      >
+      
+        <aside class="items-center grid-flow-col text-white">
+          <p>
+            ACME Industries Ltd.
+            <br />
+            Providing reliable tech since 1992
+          </p>
+        </aside>
+        <nav class="md:place-self-center md:justify-self-end">
+          <div class="grid grid-flow-col gap-4 text-white">
+            <a>
+              <i class="text-2xl fa-brands hover:text-primary fa-x-twitter"></i>
+            </a>
+            <a>
+              <i class="text-2xl fa-brands hover:text-primary fa-youtube"></i>
+            </a>
+            <a>
+              <i class="text-2xl fa-brands hover:text-primary fa-facebook-f"></i>
+            </a>
+          </div>
+        </nav>
+      </footer>
+
+
+</body>
+</html>
