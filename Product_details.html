@@ -42,6 +42,36 @@
           }
 
         </style>
+        <!-- ! -->
+        <script defer>
+          function openTab(event, tabName) {
+              let i, tabContent, tabLinks;
+  
+              // Hide all tab content
+              tabContent = document.getElementsByClassName("tab-content");
+              for (i = 0; i < tabContent.length; i++) {
+                  tabContent[i].style.display = "none";
+              }
+  
+              // Remove active class from all tab links
+              tabLinks = document.getElementsByClassName("tab-link");
+              for (i = 0; i < tabLinks.length; i++) {
+                  tabLinks[i].classList.remove("bg-blue-500", "text-white");
+                  tabLinks[i].classList.add("bg-gray-200", "text-gray-800");
+              }
+  
+              // Show the clicked tab content
+              document.getElementById(tabName).style.display = "block";
+              // Add active class to the clicked tab link
+              event.currentTarget.classList.add("bg-blue-500", "text-white");
+              event.currentTarget.classList.remove("bg-gray-200", "text-gray-800");
+          }
+  
+          // Simulate a click on the default tab on page load
+          document.addEventListener("DOMContentLoaded", function () {
+              document.getElementById("defaultTab").click();
+          });
+      </script>
       </head>
 <body class="jost">
     <header class=" max-w-[1620px] mx-auto">
@@ -156,16 +186,16 @@
                 <div class="container mx-auto px-4">
                   
               
-                  <div class="lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 border px-5 gap-12 lg:mt-12 lg:grid-cols-5 lg:gap-16">
+                  <div class="lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 px-5 gap-12 lg:mt-12 lg:grid-cols-5 lg:gap-16">
                     <div class="lg:col-span-3 lg:row-end-1">
                       <div class="lg:flex lg:items-start">
-                        <div class="lg:order-2 lg:ml-5 border">
+                        <div class="lg:order-2 lg:ml-5">
                           <div class="max-w-xl flex justify-center items-center overflow-hidden rounded-lg">
-                            <img class="h-full border w-full max-w-full object-cover" src="/assests/products/55.png" alt="" />
+                            <img class="h-full w-full max-w-full object-cover" src="/assests/products/55.png" alt="" />
                           </div>
                         </div>
               
-                        <div class="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0 border">
+                        <div class="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0">
                           <div class="flex flex-row items-start lg:flex-col">
                             <button type="button" class="flex-0 border items-center w-full flex justify-center aspect-square mb-3 h-20 overflow-hidden rounded-lg  text-center">
                               <img class=" object-cover border " src="/assests/products/1.png" alt="" />
@@ -219,63 +249,234 @@
               </div>
               
               
-              <h2 class="mt-8 text-base text-gray-900 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In maiores eaque assumenda modi velit magnam laboriosam, iure totam quisquam odit? Unde aperiam dolorem facere beatae! Dolorum nemo vel iusto maiores.</h2>
+              <h2 class="mt-8 text-base text-gray-900 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In maiores eaque assumenda modi velit magnam laboriosam.</h2>
 
-              <hr class="border mt-2">
+              <!-- <hr class="border mt-2"> -->
                       
               
-                      <div class="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
-                        <div class="flex items-end">
-                          <h1 class="text-3xl font-bold">$60.50</h1>
-                          <span class="text-base">/month</span>
+                      <div class="mt-2 space-x-3 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
+                        <div class="flex items-end rounded-3xl border p-2">
+                          <div class="flex space-x-2 items-center">
+                            <button class="btn btn-sm rounded-full">+</button>
+                            <h2>5</h2>
+                            <button  class="btn btn-sm rounded-full">-</button>
+                          </div>
                         </div>
               
-                        <button type="button" class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                          </svg>
+                        <button type="button" class="inline-flex w-full items-center justify-center rounded-3xl border-2 border-transparent bg-primary bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800">
+                         
                           Add to cart
                         </button>
+                        <button class="btn rounded-full"><i class="fa-solid fa-heart"></i></button>
                       </div>
               
                       <ul class="mt-8 space-y-2">
                         <li class="flex items-center text-left text-sm font-medium text-gray-600">
-                          <svg class="mr-2 block h-5 w-5 align-middle text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" class=""></path>
-                          </svg>
-                          Free shipping worldwide
+                        <span class="mr-2">Category :</span>
+                          Vegetable
                         </li>
               
                         <li class="flex items-center text-left text-sm font-medium text-gray-600">
-                          <svg class="mr-2 block h-5 w-5 align-middle text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" class=""></path>
-                          </svg>
-                          Cancel Anytime
+                         <span class="mr-2">Tags :</span>
+                          Vegetable,green cabbage,cabbage
                         </li>
                       </ul>
                     </div>
               
-                    <div class="lg:col-span-3">
-                      <div class="border-b border-gray-300">
-                        <nav class="flex gap-4">
-                          <a href="#" title="" class="border-b-2 border-gray-900 py-4 text-sm font-medium text-gray-900 hover:border-gray-400 hover:text-gray-800"> Description </a>
-              
-                          <a href="#" title="" class="inline-flex items-center border-b-2 border-transparent py-4 text-sm font-medium text-gray-600">
-                            Reviews
-                            <span class="ml-2 block rounded-full bg-gray-500 px-2 py-px text-xs font-bold text-gray-100"> 1,209 </span>
-                          </a>
-                        </nav>
+                   
+                  </div>
+                  <div>
+                   
+                    <!-- !! tab -->
+                   <div class="flex justify-between mt-5 gap-3">
+                    <div class=" w-8/12  ">
+                      <div class="flex mb-4 space-x-2 ">
+                          <button id="defaultTab" class="tab-link flex-1    rounded-2xl  text-white " onclick="openTab(event, 'Description')">Description</button>
+                          <button class="tab-link flex-1   rounded-2xl  text-white " onclick="openTab(event, 'AdditionalInfo')">Additional Information</button>
+                          <button class="tab-link flex-1   rounded-2xl  text-white " onclick="openTab(event, 'CustomerFeedback')">Customer Feedback</button>
                       </div>
-              
-                      <div class="mt-8 flow-root sm:mt-12">
-                        <h1 class="text-3xl font-bold">Delivered To Your Door</h1>
-                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium nesciunt fuga.</p>
-                        <h1 class="mt-8 text-3xl font-bold">From the Fine Farms of Brazil</h1>
-                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam enim facere.</p>
-                        <p class="mt-4">Amet consectetur adipisicing elit. Optio numquam enim facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore rerum nostrum eius facere, ad neque.</p>
+                  
+                      <div id="Description" class="tab-content space-y-2 bg-white p-4 ">
+                          
+                          <p class="font-light text-gray-500">Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis commodo quis, egestas elementum leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.
+                            <br>
+                            Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus elementum tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus elementum neque et pharetra. </p>
+                            <ul class="font-normal text-gray-500 space-y-2">
+                              <li><i class="fa-solid text-primary   fa-circle-check "></i> 100 g of fresh leaves provides..</li>
+                              <li><i class="fa-solid text-primary fa-circle-check"></i> Aliquam ac est at augue volutpat elementum..</li>
+                              <li><i class="fa-solid text-primary fa-circle-check"></i> Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+                              <li><i class="fa-solid text-primary fa-circle-check"></i>  dolor sit amet consectetur adipisicing elit. Hic, recusandae.</li>
+                              <li><i class="fa-solid text-primary fa-circle-check"></i>  consectetur adipisicing elit. Hic, recusandae.</li>
+                            </ul>
+                            <p class="font-light text-gray-500">Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi.</p>
+                      </div>
+                  
+                      <div id="AdditionalInfo" class="tab-content bg-white p-4" style="display:none;">
+                          <h2 class="text-lg ">Weight : 25 kg</h2>
+                          <h2 class="text-lg ">Color : Green</h2>
+                          <h2 class="text-lg ">Type : Organic</h2>
+                          <h2 class="text-lg ">Category : Vegetable</h2>
+                          <h2 class="text-lg ">Stock Status : Available</h2>
+                          <h2 class="text-lg ">Tages : Organic,Green</h2>
+                         
+                      </div>
+                  
+                      <div id="CustomerFeedback" class="tab-content bg-white p-4" style="display:none;">
+                          <div class="border p-3">
+                            <div class=" flex items-center justify-between">
+                              <div class="flex items-center gap-2">
+                                <img class="w-8" src="/assests/social/youtube (4) 1.svg" alt="">
+                                <div>
+                                  <h2>Walton</h2>
+                                  <div>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>2 min ago</p>
+                              </div>
+  
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur veniam possimus est repellat animi natus, ipsa alias fuga odit ullam deserunt aliquid, optio, laudantium non. Culpa ad nemo reiciendis reprehenderit.</p>
+                          </div>
+                          <div class="border p-3">
+                            <div class=" flex items-center justify-between">
+                              <div class="flex items-center gap-2">
+                                <img class="w-8" src="/assests/social/youtube (4) 1.svg" alt="">
+                                <div>
+                                  <h2>Walton</h2>
+                                  <div>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>2 min ago</p>
+                              </div>
+  
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur veniam possimus est repellat animi natus, ipsa alias fuga odit ullam deserunt aliquid, optio, laudantium non. Culpa ad nemo reiciendis reprehenderit.</p>
+                          </div>
+                          <div class="border p-3">
+                            <div class=" flex items-center justify-between">
+                              <div class="flex items-center gap-2">
+                                <img class="w-8" src="/assests/social/youtube (4) 1.svg" alt="">
+                                <div>
+                                  <h2>Walton</h2>
+                                  <div>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                    <i class="fa-solid fa-star text-yellow-500"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>2 min ago</p>
+                              </div>
+  
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur veniam possimus est repellat animi natus, ipsa alias fuga odit ullam deserunt aliquid, optio, laudantium non. Culpa ad nemo reiciendis reprehenderit.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                    <img src="/assests/banner/ad2.png" alt="">
+                   <div class="flex items-center justify-between mt-4 border-2 p-3  ">
+                    <div class="flex items-center gap-2">
+                      <i class="fa-solid fa-tags text-xl text-primary"></i>
+                     <div> <h2>65% Discount</h2>
+                      <p class="text-gray-500">Save Your Money With Upto 30%</p></div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fa-brands fa-pagelines text-xl text-primary"></i>
+                     <div> <h2>100% Organic</h2>
+                      <p class="text-gray-500">100% Organic Vegetable</p></div>
+                    </div>
+                   </div>
+                  </div>
+                   </div>
+                  
+                    <div class="mt-6">
+                      <h1 class="text-4xl text-center font-bold">Related Product</h1>
+                      <!-- ! related products -->
+                      <div class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-5 mt-4 space-x-5">
+                        <div class="border  px-2  border-gray-500 rounded-2xl">
+                          <div class="flex justify-center">
+                              <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                          </div>
+                         <div class="space-y-1 text-center lg:text-start">
+                          <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                          <div>
+                             <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                          </div>
+                          <h1 class="text-xl font-semibold">350 taka</h1>
+                         </div>
+                         <button class="btn   mb-2  hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                       </div>
+                        <div class="border  px-2  border-gray-500 rounded-2xl">
+                          <div class="flex justify-center">
+                              <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                          </div>
+                         <div class="space-y-1 text-center lg:text-start">
+                          <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                          <div>
+                             <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                          </div>
+                          <h1 class="text-xl font-semibold">350 taka</h1>
+                         </div>
+                         <button class="btn   mb-2  hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                       </div>
+                        <div class="border  px-2  border-gray-500 rounded-2xl">
+                          <div class="flex justify-center">
+                              <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                          </div>
+                         <div class="space-y-1 text-center lg:text-start">
+                          <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                          <div>
+                             <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                          </div>
+                          <h1 class="text-xl font-semibold">350 taka</h1>
+                         </div>
+                         <button class="btn   mb-2  hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                       </div>
+                        <div class="border  px-2  border-gray-500 rounded-2xl">
+                          <div class="flex justify-center">
+                              <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                          </div>
+                         <div class="space-y-1 text-center lg:text-start">
+                          <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                          <div>
+                             <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                          </div>
+                          <h1 class="text-xl font-semibold">350 taka</h1>
+                         </div>
+                         <button class="btn   mb-2  hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                       </div>
+                        <div class="border  px-2  border-gray-500 rounded-2xl">
+                          <div class="flex justify-center">
+                              <img class="" src="/assests//products/0004606_oxyfil-tablet-500-gm_300-removebg-preview 1.svg" alt="">
+                          </div>
+                         <div class="space-y-1 text-center lg:text-start">
+                          <h2 class="font-semibold tracking-tighter">Oxyfil Tablet 500 gm </h2>
+                          <div>
+                             <h2> <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span> 5.0 <span class="text-gray-400">(135 review)</span></h2>
+                          </div>
+                          <h1 class="text-xl font-semibold">350 taka</h1>
+                         </div>
+                         <button class="btn   mb-2  hover:bg-primary hover:text-white w-full">Add to Cart</button>
+                       </div>
                       </div>
                     </div>
-                  </div>
+                  
+                 
                 </div>
               </section>
               
